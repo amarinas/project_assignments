@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        moongoose_dash
+    </title>
+    <style>
+        .btn{
+            background-color:green;
+            color:black;
+
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+
+        <a href="/new" class="btn" >Create new animal</a>
+
+        <% for (all in animals) { %>
+        <div class="col-*-*"><h2>Name:<a href="/shows/<%= animals[all]._id %>"> <%= animals[all].name %> </a></h2></div>
+        <div class="col-*-*"><h4><a href="/<%= animals[all]._id %>/edit">Edit</a></h4></div>
+        <form action="/<%= animals[all]._id %>/delete" class="btn" method="post">
+            <input type="submit" value="Delete Me">
+        </form>
+
+
+        <% } %></div>
+
+</div>
+
+</div>
+
+</body>
+</html>

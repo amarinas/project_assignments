@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        show animal moongoose_dash
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <a href="/" class="btn" >Home</a>
+
+        <h2>Name: <%= animals.name %></h2>
+        <h2>Breed: <%= animals.breed %></h2>
+        <h2>Color: <%= animals.color %></h2>
+
+
+        <form action="/<%= animals.id %>" method="POST">
+            Name:<input type="text" name="name" id="name">
+            Breed: <input type="text" name="breed" id="age">
+            Color: <input type="text" name="color" id="age">
+            <input type="submit">
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
